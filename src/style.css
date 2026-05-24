@@ -1,0 +1,4 @@
+/* src/style.css — base reset only, all site styles live in index.html <style> */
+/* This file kept for Vite CSS pipeline compatibility */
+
+.hidden { display: none !important; }
