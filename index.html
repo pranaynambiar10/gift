@@ -191,6 +191,12 @@
       transform: translateX(-50%); z-index: 15;
       display: flex; flex-direction: column; align-items: center; gap: 5px;
       animation: cueFloat 2.2s ease-in-out infinite;
+      transition: opacity 0.5s ease, visibility 0.5s ease;
+    }
+    #scroll-cue.hidden-cue {
+      opacity: 0 !important;
+      visibility: hidden;
+      animation: none;
     }
     #scroll-cue span {
       font-size: 0.52rem; letter-spacing: 0.28em;
@@ -993,6 +999,16 @@ function startRAFLoop() {
   }
   tick();
 }
+
+/* ── Scroll cue fade ────────────────────────────────── */
+const scrollCue = document.getElementById('scroll-cue');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) {
+    if (scrollCue) scrollCue.classList.add('hidden-cue');
+  } else {
+    if (scrollCue) scrollCue.classList.remove('hidden-cue');
+  }
+}, { passive: true });
 
 /* ── Scroll-reveal for details sections ─────────────── */
 function revealOnScroll() {
