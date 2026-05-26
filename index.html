@@ -619,10 +619,31 @@
       margin: 0 auto 20px;
     }
     .ft-sub {
-      font-family: 'Outfit'; font-size: .56rem; letter-spacing: .3em;
-      text-transform: uppercase; color: rgba(200,168,75,.32);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(0.9rem, 3vw, 1.15rem);
+      font-style: italic;
+      letter-spacing: 0.08em;
+      color: rgba(245,230,200,0.75);
       position: relative; z-index: 1;
     }
+    .ft-credit {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.52rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(200,168,75,0.35);
+      position: relative; z-index: 1;
+      margin-top: 32px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(200,168,75,0.1);
+    }
+    .ft-credit a {
+      color: rgba(200,168,75,0.6);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color 0.3s;
+    }
+    .ft-credit a:hover { color: #FFD700; }
 
     ::-webkit-scrollbar { width: 3px; }
     ::-webkit-scrollbar-track { background: var(--dark); }
@@ -827,7 +848,8 @@
   <span class="ft-names">Noynika &amp; Sreerag</span>
   <span class="ft-tagline">Sunday · 12 July 2026 · Eventza Convention Centre</span>
   <div class="ft-rule"></div>
-  <div class="ft-sub" style="line-height:1.6;">With Love<br>Cheruvalath family</div>
+  <div class="ft-sub">With Love<br>Cheruvalath Family</div>
+  <div class="ft-credit">Crafted with love by <a href="https://www.instagram.com/kathu.in?igsh=MWY0bndvaDdnY2NoaQ==" target="_blank" rel="noopener noreferrer">kathu.in</a></div>
 </footer>
 
 <script>
